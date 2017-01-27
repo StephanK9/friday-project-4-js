@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Member } from '../member.model';
 import { Router } from '@angular/router';
 import { MemberService } from '../member.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-headquarter',
@@ -10,8 +11,8 @@ import { MemberService } from '../member.service';
   providers: [MemberService]
 })
 export class HeadquarterComponent implements OnInit {
-  members: Member[];
-  
+  members: FirebaseListObservable<any[]>;
+
   constructor(private router: Router, private memberService: MemberService){}
 
   ngOnInit(){

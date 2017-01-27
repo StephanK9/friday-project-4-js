@@ -14,7 +14,16 @@ export class EditMemberComponent implements OnInit {
 
   ngOnInit() {
   }
+
   beginUpdatingMember(memberToUpdate){
     this.memberService.updateMember(memberToUpdate);
   }
+
+  beginDeletingMember(memberToDelete){
+    if(confirm("Are you sure you want to delete this member from GroupChat?")){
+      this.memberService.deleteMember(memberToDelete);
+    }
+  }
+
+
 }

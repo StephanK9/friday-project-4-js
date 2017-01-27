@@ -2,5 +2,6 @@
 <p>This is the center of information for all the members.</p>
 <div *ngFor="let member of members | async" (click)="goToDetailPage(member)" class="panel panel-default">
   <div class ="panel-body">
-  <h3><em>{{member.name}}</em> Status: {{member.status}}</h3></div>
+  <h3><em>{{member.name}}</em> Status: {{member.status}}</h3>
+  </div>
 </div>

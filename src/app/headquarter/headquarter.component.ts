@@ -22,7 +22,7 @@ export class HeadquarterComponent implements OnInit {
 
 
 
-  goToDetailPage(clickedMember: Member) {
-    this.router.navigate(['members', clickedMember.id]);
+  goToDetailPage(clickedMember) {
+    this.router.navigate(['members', clickedMember.$key]);
   };
 }

@@ -1,0 +1,27 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add a new Member to the GroupChat.</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+      <label>Member Name:</label>
+      <br>
+      <input #newTitle>
+      </div>
+
+      <div>
+        <label>Status: (Online or Offline)</label>
+        <br>
+        <input #newStatus>
+      </div>
+
+      <div>
+        <label>Member Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+      <button (click)="submitForm(newName.value, newStatus.value, newDescription.value); newName.value=''; newStatus.value=''; newDescription.value=''">Add</button>
+    </div>
+  </div>
+</div>

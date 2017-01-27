@@ -1,0 +1,14 @@
+h1 {
+  color: #a1b1cc;
+  font-size: 40px;
+  font-style: italic;
+}
+
+p {
+  color: #d0d8e5;
+}
+
+.jumbotron {
+  background-color: #4286f4;
+  text-align: center;
+}

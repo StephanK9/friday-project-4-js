@@ -1,0 +1,14 @@
+.panel-header {
+  background-color: #dee5ef;
+}
+
+.panel-body {
+  background-color: #e2e2e2;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  font-style: italic;
+}

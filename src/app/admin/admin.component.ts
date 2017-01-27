@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../member.model';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
-import { MemberService } from '../member.service';
+import { MemberService } from '../member.service'
 
 @Component({
   selector: 'app-admin',

@@ -1,8 +1,14 @@
 <h2>WELCOME TO YOUR HQ</h2>
 
 <p>This is the center of information for all the members.</p>
+<select (change)="onChange($event.target.value)">
+  <option value="allStatus" selected="selected">All Users</option>
+  <option value="onlineStatus">Online</option>
+  <option value="offlineStatus">Offline</option>
+</select>
 
-<div *ngFor="let member of members | async" class="panel panel-default">
+
+<div *ngFor="let member of members | async | status:filterByStatus" class="panel panel-default">
   <div class ="panel-body">
   <h3 (click)="goToDetailPage(member)"><em>{{member.name}}</em> Status: {{member.status}}</h3>
   <div *ngIf="currentRoute === '/admin'">

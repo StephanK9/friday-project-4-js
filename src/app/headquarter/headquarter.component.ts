@@ -3,6 +3,7 @@ import { Member } from '../member.model';
 import { Router } from '@angular/router';
 import { MemberService } from '../member.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { StatusPipe } from '../status.pipe';
 
 @Component({
   selector: 'app-headquarter',
@@ -11,6 +12,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   providers: [MemberService]
 })
 export class HeadquarterComponent implements OnInit {
+  filterByStatus: string = "allMembers";
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
@@ -20,10 +22,11 @@ export class HeadquarterComponent implements OnInit {
     this.members = this.memberService.getMembers();
   }
 
-
-
-
   goToDetailPage(clickedMember) {
     this.router.navigate(['members', clickedMember.$key]);
-  };
+  }
+
+  onChange(menuOption) {
+    this.filterByStatus = menuOption;
+    }
 }
